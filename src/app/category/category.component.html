@@ -1,0 +1,5 @@
+<h4 class="page-header">Categories</h4>
+<div class="list-group">
+  <a class="list-group-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" (click)="onSelect()" routerLink="products" >Get All Categories</a>
+  <a *ngFor="let category of categories" (click)="onSelect(category)" routerLinkActive="active" class="list-group-item" routerLink="products/{{category.seoUrl}}" >{{category.categoryName}}</a>
+</div>
